@@ -4,11 +4,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trabajo Integrador - IDW</title>
+    <title>Soy tu huésped - Home</title>
+    <link rel="icon" type="image/svg" href="/assets/logos/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/index.css" type="text/css">
 </head>
 
 <body>
-    <h1>INDEX IT'S ALIVE</h1>
+    <header class="header"><a href="/"><img src="assets/logos/logo.svg" width="250" alt="Logo"></a>
+        <nav class="navigator">
+            <ul>
+                <ol><a class="selected" href="">Hospedate</a></ol>
+                <span class="separator"></span>
+                <ol><a href="">Contactate</a></ol>
+                <span class="separator"></span>
+                <ol><a href="">Conocenos</a></ol>
+            </ul>
+        </nav>
+        <div class="user"><span class="material-icons icon">
+                account_circle
+            </span><button class="login">Iniciar sesión</button></div>
+    </header>
+    <main>
+        <section class="container">
+            <div class="search-container"><input type="text" placeholder="¿Dónde vamos?" name="search" id="search">
+                <input type="date" placeholder="Elige una fecha" name="date" id="date">
+                <button class="button-search" type="button"><span class="material-icons">
+                        flight_takeoff
+                    </span><span>Vamos!</span></button>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <span></span>
+        <a href="/"><img src="assets/logos/logo_footer.svg" alt="Logo Footer"></a>
+        <div>
+            <a class="social-network" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><img
+                    src="assets/logos/facebook.svg" alt="Logo Facebook"></a>
+            <a class="social-network" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img
+                    src="assets/logos/instagram.svg" alt="Logo Instagram"></a>
+            <a class="social-network" href="https://www.x.com/" target="_blank" rel="noopener noreferrer"><img
+                    src="assets/logos/twitter.svg" alt="Logo Twitter"></a>
+        </div>
+    </footer>
 </body>
 
 </html>

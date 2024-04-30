@@ -4,10 +4,10 @@ const { join, dirname } = require('path');
 const PORT = 3000;
 
 app.get('/', (req, res) => {
-  res.sendFile(join(__dirname, '..', 'index.html'));
+  res.sendFile(join(__dirname, '../index.html'));
 });
 
-app.use(express.static(join(__dirname, 'src')));
+app.use(express.static(join(__dirname, '../')));
 
 app.use((err, req, res, next) => {
   console.error(err.stack);
