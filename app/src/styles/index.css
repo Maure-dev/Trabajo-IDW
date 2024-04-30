@@ -101,12 +101,14 @@ body {
   width: 100vw;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 
   .search-container {
     display: flex;
     align-items: center;
+    margin-top: 8rem;
     padding: 0.5rem 2rem;
     border: 6px solid #e42153;
     border-radius: 5rem;
@@ -126,6 +128,7 @@ body {
       cursor: pointer;
     }
     .button-search {
+      text-decoration-line: none;
       display: flex;
       align-items: center;
       border: 2px solid #03cf74;
@@ -143,6 +146,57 @@ body {
     }
     .button-search:hover {
       border: 2px solid white;
+    }
+  }
+  .opinions-container {
+    display: flex;
+    background-color: #ff7d34b3;
+    width: 98%;
+    border-radius: 1rem;
+    margin-bottom: 8rem;
+    .box {
+      display: flex;
+      flex-direction: column;
+      margin: 1rem;
+      padding: 1rem;
+      background-color: #ffffff80;
+      border-radius: 1rem;
+      h1,
+      p {
+        margin-top: 0;
+      }
+      p {
+        font-size: 0.8rem;
+        margin-bottom: 0;
+      }
+    }
+    .about {
+      width: 100rem;
+      .link {
+        display: flex;
+        align-items: center;
+        text-decoration-line: none;
+        border-radius: 5rem;
+        font-size: 1rem;
+        color: white;
+        width: fit-content;
+        background-color: #0094ff;
+        align-self: flex-end;
+      }
+    }
+    .user-opinion {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+      h1 {
+        margin-bottom: 0;
+        font-weight: 600;
+        font-size: 1.2rem;
+      }
+      .user-photo {
+        border-radius: 5rem;
+        margin-right: 0.5rem;
+      }
     }
   }
 }
