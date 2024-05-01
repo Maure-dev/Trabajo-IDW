@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soy tu huésped - Home</title>
+    <link rel="icon" type="image/svg" href="/assets/logos/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/index.css" type="text/css">
+</head>
+
+<body>
+    <header class="header"><a href="/"><img src="assets/logos/logo.svg" width="250" alt="Logo"></a>
+        <nav class="navigator">
+            <ul>
+                <ol><a class="selected" href="/">Hospedate</a></ol>
+                <span class="separator"></span>
+                <ol><a href="/contact">Contactate</a></ol>
+                <span class="separator"></span>
+                <ol><a href="/about">Conócenos</a></ol>
+            </ul>
+        </nav>
+        <div class="user"><span class="material-icons icon">
+                account_circle
+            </span><button class="login">Iniciar sesión</button></div>
+    </header>
+    <main>
+        <section class="container">
+            <div class="search-container"><input type="text" placeholder="¿Dónde vamos?" name="search" id="search">
+                <input type="date" placeholder="Elige una fecha" name="date" id="date">
+                <a class="button-search" href="/destinations"><span class="material-icons">
+                        flight_takeoff
+                    </span><span>Vamos!</span></a>
+            </div>
+            <div class="opinions-container">
+                <div class="about box">
+                    <h1>Sobre nosotros:</h1>
+                    <p>Somos una plataforma de alojamientos que conecta a viajeros con anfitriones de todo el mundo.
+                        Ofrecemos una amplia variedad de opciones de hospedaje, desde casas y apartamentos hasta
+                        habitaciones privadas, permitiendo a nuestros usuarios encontrar el lugar perfecto para su
+                        próxima aventura o viaje de negocios.</p>
+                    <a class="link" href="/about"><span class="material-icons">add</span></a>
+                </div>
+                <div class="opinion box">
+                    <div class="user-opinion"><img class="user-photo" src="assets/index/brian.jpeg" alt="Brian - Perfil"
+                            width="50">
+                        <h1>Brian Leonel Retamar</h1>
+                    </div>
+                    <p>"Mi estancia fue simplemente maravillosa." El anfitrión fue muy atento y
+                        el apartamento estaba impecable. La ubicación era perfecta, cerca de todo lo que quería visitar.
+                    </p>
+                </div>
+                <div class="opinion box">
+                    <div class="user-opinion"><img class="user-photo" src="assets/index/javier.jpeg"
+                            alt="Javier - Perfil" width="50">
+                        <h1>Javier Ignacio Gerol</h1>
+                    </div>
+                    <p>"El alojamiento superó mis expectativas por el precio." Todo estaba limpio y bien equipado. El
+                        anfitrión fue muy amable y nos dio excelentes recomendaciones para explorar la zona.</p>
+                </div>
+                <div class="opinion box">
+                    <div class="user-opinion"><img class="user-photo" src="assets/index/mauro.jpg" alt="Mauro - Perfil"
+                            width="50">
+                        <h1>Mauro Alejandro Gerardi</h1>
+                    </div>
+                    <p>"El apartamento estaba en una ubicación increíble, a solo unos pasos de los principales puntos de
+                        interés." Me encantó lo cómodo y acogedor que era. Fue una experiencia inolvidable.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <span></span>
+        <a href="/"><img src="assets/logos/logo_footer.svg" alt="Logo Footer"></a>
+        <div>
+            <a class="social-network" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><img
+                    src="assets/logos/facebook.svg" alt="Logo Facebook"></a>
+            <a class="social-network" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img
+                    src="assets/logos/instagram.svg" alt="Logo Instagram"></a>
+            <a class="social-network" href="https://www.x.com/" target="_blank" rel="noopener noreferrer"><img
+                    src="assets/logos/twitter.svg" alt="Logo Twitter"></a>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+{
+  "name": "trabajo-idw-api",
+  "version": "1.0.0",
+  "description": "Trabajo Integrador - Introducción al Desarrollo Web",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon ./app/src/api/server.js",
+    "start": "node ./app/src/api/server.js"
+  },
+  "keywords": [],
+  "author": "Mauro Alejandro Gerardi, Javier Ignacio Gerol, Brian Leonel Retamar",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2",
+    "nodemon": "^3.1.0",
+    "path": "^0.12.7"
+  }
+}
