@@ -99,7 +99,8 @@ body {
   background-position: center;
   background-size: cover;
   width: 100vw;
-  height: 100vh;
+  height: 64vh;
+  padding-top: 12rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -108,7 +109,7 @@ body {
   .search-container {
     display: flex;
     align-items: center;
-    margin-top: 8rem;
+    margin-top: 6rem;
     padding: 0.5rem 2rem;
     border: 6px solid #e42153;
     border-radius: 5rem;
@@ -153,7 +154,7 @@ body {
     background-color: #ff7d34b3;
     width: 98%;
     border-radius: 1rem;
-    margin-bottom: 8rem;
+    margin-bottom: 1rem;
     .box {
       display: flex;
       flex-direction: column;
@@ -216,4 +217,8 @@ body {
   .social-network:last-child {
     margin-right: 0;
   }
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
