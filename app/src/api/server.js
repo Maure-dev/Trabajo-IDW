@@ -7,6 +7,18 @@ app.get('/', (req, res) => {
   res.sendFile(join(__dirname, '../index.html'));
 });
 
+app.get('/about', (req, res) => {
+  res.sendFile(join(__dirname, '../pages/about.html'));
+});
+
+app.get('/contact', (req, res) => {
+  res.sendFile(join(__dirname, '../pages/contact.html'));
+});
+
+app.get('/destinations', (req, res) => {
+  res.sendFile(join(__dirname, '../pages/destinations.html'));
+});
+
 app.use(express.static(join(__dirname, '../')));
 
 app.use((err, req, res, next) => {
