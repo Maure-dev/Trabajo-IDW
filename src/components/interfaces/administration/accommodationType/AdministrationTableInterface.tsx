@@ -1,4 +1,4 @@
-import { AdministrationTablePropsType } from "../../../entities/entities";
+import { AdministrationTablePropsType } from "../../../../entities/entities";
 import AdministrationRowInterface from "./AdministrationRowInterface";
 
 export default function AdministrationTableInterface({

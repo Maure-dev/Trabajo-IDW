@@ -4,12 +4,12 @@ import {
   createTipoAlojamiento,
   updateTipoAlojamiento,
   deleteTipoAlojamiento,
-} from "../../../services/administration/administrationService";
-import { AdministrationAccommodationType } from "../../../entities/entities";
+} from "../../../../services/administration/administrationService";
+import { AdministrationAccommodationType } from "../../../../entities/entities";
 import AdministrationFormInterface from "./AdministrationFormInterface";
 import AdministrationTableInterface from "./AdministrationTableInterface";
 
-export default function AdministrationMainInterface() {
+export default function AdministrationAccommodationTypeMainInterface() {
   const [tiposAlojamientos, setTiposAlojamientos] = useState<
     AdministrationAccommodationType[]
   >([]);
@@ -68,7 +68,7 @@ export default function AdministrationMainInterface() {
   };
 
   return (
-    <div className="flex flex-col items-center lg:items-start p-4 w-full h-full text-center lg:text-start">
+    <div className="flex flex-col items-center lg:items-start w-full h-full text-center lg:text-start px-4 lg:px-24 py-4">
       <h1 className="text-2xl font-bold mb-4">
         Gestión de Tipos de Alojamiento
       </h1>

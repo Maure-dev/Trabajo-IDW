@@ -1,4 +1,4 @@
-import { AdministrationFormPropsType } from "../../../entities/entities";
+import { AdministrationFormPropsType } from "../../../../entities/entities";
 
 export default function AdministrationFormInterface({
   formState,

@@ -37,6 +37,11 @@ export type DestinationsMainPropsType = {
     searchTerm: string;
 }
 
+export type AdministrationTabPropsType = {
+    activeTab: string;
+    setActiveTab: (activeTab: string) => void;
+}
+
 export type AdministrationAccommodationType = {
     idTipoAlojamiento: number;
     Descripcion: string;
