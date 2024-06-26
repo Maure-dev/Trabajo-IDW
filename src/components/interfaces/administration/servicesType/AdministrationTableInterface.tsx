@@ -1,11 +1,11 @@
-import { AdministrationTablePropsType } from "../../../entities/entities";
+import { AdministrationServicesTypeTablePropsType } from "../../../../entities/entities";
 import AdministrationRowInterface from "./AdministrationRowInterface";
 
 export default function AdministrationTableInterface({
-  tiposAlojamientos,
+  tiposServicios,
   handleEdit,
   handleDelete,
-}: AdministrationTablePropsType) {
+}: AdministrationServicesTypeTablePropsType) {
   return (
     <div className="w-full border-4 border-[#e42153] bg-[#e4215380] rounded-2xl p-4 overflow-y-auto">
       <table className="w-full border-4 border-white">
@@ -15,18 +15,18 @@ export default function AdministrationTableInterface({
               ID
             </th>
             <th className="border-4 border-white p-2 text-white text-lg text-left w-full">
-              Descripción
+              Nombre
             </th>
             <th className="border-4 border-white p-2 text-white text-lg">
               Acciones
             </th>
           </tr>
         </thead>
-        {tiposAlojamientos.length > 0 && (
+        {tiposServicios.length > 0 && (
           <tbody>
-            {tiposAlojamientos.map((tipo) => (
+            {tiposServicios.map((tipo) => (
               <AdministrationRowInterface
-                key={tipo.idTipoAlojamiento}
+                key={tipo.idServicio}
                 tipo={tipo}
                 handleEdit={handleEdit}
                 handleDelete={handleDelete}
@@ -35,9 +35,9 @@ export default function AdministrationTableInterface({
           </tbody>
         )}
       </table>
-      {tiposAlojamientos.length === 0 && (
+      {tiposServicios.length === 0 && (
         <h1 className="p-8 text-center text-white font-bold text-2xl w-full">
-          No hay registros de "Tipos Alojamiento"
+          No hay registros de "Tipos Servicios"
         </h1>
       )}
     </div>

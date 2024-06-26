@@ -1,11 +1,11 @@
-import { AdministrationFormPropsType } from "../../../entities/entities";
+import { AdministrationServicesTypeFormPropsType } from "../../../../entities/entities";
 
 export default function AdministrationFormInterface({
   formState,
   isEditing,
   handleInputChange,
   handleSubmit,
-}: AdministrationFormPropsType) {
+}: AdministrationServicesTypeFormPropsType) {
   return (
     <form
       onSubmit={handleSubmit}
@@ -17,10 +17,10 @@ export default function AdministrationFormInterface({
     >
       <input
         type="text"
-        name="Descripcion"
-        value={formState.Descripcion}
+        name="Nombre"
+        value={formState.Nombre}
         onChange={handleInputChange}
-        placeholder="Descripción"
+        placeholder="Nombre"
         className="p-4 border-2 rounded-lg mb-4 lg:mb-0 lg:mr-4"
         required
       />

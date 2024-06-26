@@ -1,32 +1,30 @@
 import { ChangeEvent, FormEvent, useEffect, useState } from "react";
 import {
-  fetchTiposAlojamientos,
-  createTipoAlojamiento,
-  updateTipoAlojamiento,
-  deleteTipoAlojamiento,
-} from "../../../services/administration/administrationService";
-import { AdministrationAccommodationType } from "../../../entities/entities";
+  fetchImagenes,
+  createImagen,
+  updateImagen,
+  deleteImagen,
+} from "../../../../services/administration/administrationService";
+import { AdministrationImagesType } from "../../../../entities/entities";
 import AdministrationFormInterface from "./AdministrationFormInterface";
 import AdministrationTableInterface from "./AdministrationTableInterface";
 
-export default function AdministrationMainInterface() {
-  const [tiposAlojamientos, setTiposAlojamientos] = useState<
-    AdministrationAccommodationType[]
-  >([]);
-  const [formState, setFormState] = useState<AdministrationAccommodationType>({
-    idTipoAlojamiento: 0,
-    Descripcion: "",
+export default function AdministrationImagesMainInterface() {
+  const [imagenes, setimagenes] = useState<AdministrationImagesType[]>([]);
+  const [formState, setFormState] = useState<AdministrationImagesType>({
+    idImagen: 0,
+    RutaArchivo: "",
   });
   const [isEditing, setIsEditing] = useState<boolean>(false);
 
   useEffect(() => {
-    loadTiposAlojamientos();
+    loadImagenes();
   }, []);
 
-  const loadTiposAlojamientos = async () => {
+  const loadImagenes = async () => {
     try {
-      const data = await fetchTiposAlojamientos();
-      setTiposAlojamientos(data);
+      const data = await fetchImagenes();
+      setimagenes(data);
     } catch (error) {
       console.error("Error loading tiposAlojamientos:", error);
     }
@@ -41,37 +39,38 @@ export default function AdministrationMainInterface() {
     e.preventDefault();
     try {
       if (isEditing) {
-        await updateTipoAlojamiento(formState);
+        await updateImagen(formState);
       } else {
-        await createTipoAlojamiento(formState);
+        await createImagen(formState);
       }
-      setFormState({ idTipoAlojamiento: 0, Descripcion: "" });
+      setFormState({
+        idImagen: 0,
+        RutaArchivo: "",
+      });
       setIsEditing(false);
-      loadTiposAlojamientos();
+      loadImagenes();
     } catch (error) {
       console.error("Error saving tipoAlojamiento:", error);
     }
   };
 
-  const handleEdit = (tipoAlojamiento: AdministrationAccommodationType) => {
-    setFormState(tipoAlojamiento);
+  const handleEdit = (imagen: AdministrationImagesType) => {
+    setFormState(imagen);
     setIsEditing(true);
   };
 
   const handleDelete = async (id: number) => {
     try {
-      await deleteTipoAlojamiento(id);
-      loadTiposAlojamientos();
+      await deleteImagen(id);
+      loadImagenes();
     } catch (error) {
       console.error("Error deleting tipoAlojamiento:", error);
     }
   };
 
   return (
-    <div className="flex flex-col items-center lg:items-start p-4 w-full h-full text-center lg:text-start">
-      <h1 className="text-2xl font-bold mb-4">
-        Gestión de Tipos de Alojamiento
-      </h1>
+    <div className="flex flex-col items-center lg:items-start w-full h-full text-center lg:text-start px-4 lg:px-24 py-4">
+      <h1 className="text-2xl font-bold mb-4">Gestión de Imágenes</h1>
       <AdministrationFormInterface
         formState={formState}
         isEditing={isEditing}
@@ -79,7 +78,7 @@ export default function AdministrationMainInterface() {
         handleSubmit={handleSubmit}
       />
       <AdministrationTableInterface
-        tiposAlojamientos={tiposAlojamientos}
+        imagenes={imagenes}
         handleEdit={handleEdit}
         handleDelete={handleDelete}
       />
