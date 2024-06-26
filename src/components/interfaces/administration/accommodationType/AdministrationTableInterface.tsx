@@ -1,11 +1,11 @@
-import { AdministrationTablePropsType } from "../../../../entities/entities";
+import { AdministrationAccommodationTypeTablePropsType } from "../../../../entities/entities";
 import AdministrationRowInterface from "./AdministrationRowInterface";
 
 export default function AdministrationTableInterface({
   tiposAlojamientos,
   handleEdit,
   handleDelete,
-}: AdministrationTablePropsType) {
+}: AdministrationAccommodationTypeTablePropsType) {
   return (
     <div className="w-full border-4 border-[#e42153] bg-[#e4215380] rounded-2xl p-4 overflow-y-auto">
       <table className="w-full border-4 border-white">

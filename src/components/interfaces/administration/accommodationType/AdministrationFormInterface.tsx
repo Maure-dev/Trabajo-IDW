@@ -1,11 +1,11 @@
-import { AdministrationFormPropsType } from "../../../../entities/entities";
+import { AdministrationAccommodationTypeFormPropsType } from "../../../../entities/entities";
 
 export default function AdministrationFormInterface({
   formState,
   isEditing,
   handleInputChange,
   handleSubmit,
-}: AdministrationFormPropsType) {
+}: AdministrationAccommodationTypeFormPropsType) {
   return (
     <form
       onSubmit={handleSubmit}

@@ -70,7 +70,7 @@ export default function AdministrationAccommodationTypeMainInterface() {
   return (
     <div className="flex flex-col items-center lg:items-start w-full h-full text-center lg:text-start px-4 lg:px-24 py-4">
       <h1 className="text-2xl font-bold mb-4">
-        Gestión de Tipos de Alojamiento
+        Gestión de Tipos de Alojamientos
       </h1>
       <AdministrationFormInterface
         formState={formState}
